@@ -13,10 +13,10 @@ const openXFramework = [
 
 export default function OpenXPage() {
   return (
-    <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
+    <div className="pt-28 pb-16 md:pt-32 md:pb-24 bg-bg-primary min-h-screen">
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
         {/* Hero */}
-        <div className="notch-md bg-bg-secondary border border-white/10 p-8 md:p-14 mb-16 text-center relative overflow-hidden">
+        <div className="notch-md bg-bg-secondary border border-white/10 p-8 md:p-14 mb-10 md:mb-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-radial from-orange-DEFAULT/20 via-transparent to-transparent opacity-60 pointer-events-none" />
 
           <span className="text-label text-orange-DEFAULT uppercase tracking-widest block mb-3 font-mono">
@@ -34,7 +34,7 @@ export default function OpenXPage() {
         </div>
 
         {/* Not Just An AI Wrapper Rule */}
-        <div className="notch-sm bg-orange-DEFAULT/10 border border-orange-DEFAULT/40 p-8 mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div className="notch-sm bg-orange-DEFAULT/10 border border-orange-DEFAULT/40 p-6 sm:p-8 mb-10 md:mb-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div className="flex items-start gap-4">
             <AlertOctagon size={28} className="text-orange-DEFAULT shrink-0 mt-1" />
             <div>
@@ -49,7 +49,7 @@ export default function OpenXPage() {
         </div>
 
         {/* 7-Step Framework */}
-        <div className="mb-16">
+        <div className="mb-10 md:mb-16">
           <div className="max-w-2xl mb-12">
             <span className="text-label text-orange-DEFAULT uppercase tracking-widest block mb-2 font-mono">
               SUBMISSION FRAMEWORK
@@ -75,7 +75,7 @@ export default function OpenXPage() {
                   <h3 className="font-display font-bold text-lg text-text-primary mb-2">
                     {item.title}
                   </h3>
-                  <p className="text-xs text-text-secondary leading-relaxed">
+                  <p className="text-sm md:text-xs text-text-secondary leading-relaxed">
                     {item.desc}
                   </p>
                 </div>

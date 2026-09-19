@@ -28,8 +28,10 @@ export function StarfieldBackground({
 
     const handleResize = () => {
       if (!canvas) return
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
+      // Size to the containing section, not the window: on phones the hero is taller than the viewport
+      const parent = canvas.parentElement
+      canvas.width = parent?.clientWidth || window.innerWidth
+      canvas.height = parent?.clientHeight || window.innerHeight
     }
 
     handleResize()

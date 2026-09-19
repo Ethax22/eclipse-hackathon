@@ -8,14 +8,14 @@ import { ArrowUpRight } from 'lucide-react'
 
 export function ChallengePreview() {
   return (
-    <section className="py-24 bg-[#0B0D1B] relative overflow-hidden border-b border-white/10 text-white">
+    <section className="py-16 md:py-24 bg-[#0B0D1B] relative overflow-hidden border-b border-white/10 text-white">
       {/* Background ambient glow */}
       <div className="absolute top-1/3 left-10 w-96 h-96 bg-[#3E3661]/30 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute bottom-10 right-10 w-[500px] h-[500px] bg-[#F89B88]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 md:mb-16 gap-6">
           <div>
             <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F89B88] font-body block mb-3">
               CURATED & OPEN TRACKS
@@ -26,7 +26,7 @@ export function ChallengePreview() {
           </div>
           <Link
             href="/challenges"
-            className="text-xs font-bold tracking-widest uppercase text-[#F89B88] hover:text-[#F37970] flex items-center gap-2 group transition-colors py-2 px-4 rounded-full bg-[#F89B88]/10 border border-[#F89B88]/30"
+            className="text-xs font-bold tracking-widest uppercase text-[#F89B88] hover:text-[#F37970] flex items-center gap-2 group transition-colors py-3 px-4 self-start rounded-full bg-[#F89B88]/10 border border-[#F89B88]/30"
           >
             <span>VIEW ALL TRACKS</span>
             <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
@@ -59,11 +59,11 @@ export function ChallengePreview() {
                   </span>
                 </div>
 
-                <h3 className="font-display font-bold text-xl text-white group-hover:text-[#F89B88] transition-colors duration-200 mb-3 leading-snug min-h-[3.25rem] flex items-center">
+                <h3 className="font-display font-bold text-xl text-white group-hover:text-[#F89B88] transition-colors duration-200 mb-3 leading-snug md:min-h-[3.25rem] flex items-center">
                   {item.title}
                 </h3>
 
-                <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-6 font-normal line-clamp-3 min-h-[3.5rem]">
+                <p className="text-sm text-slate-300 leading-relaxed mb-6 font-normal line-clamp-3 md:min-h-[3.5rem]">
                   {item.oneLiner}
                 </p>
               </div>
@@ -74,7 +74,7 @@ export function ChallengePreview() {
                   {item.capabilities.slice(0, 3).map((cap, cIdx) => (
                     <span
                       key={cIdx}
-                      className="text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 group-hover:border-[#F89B88]/30 group-hover:text-white transition-all duration-200"
+                      className="text-[11px] sm:text-[10px] font-mono tracking-wider uppercase px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 group-hover:border-[#F89B88]/30 group-hover:text-white transition-all duration-200"
                     >
                       {cap}
                     </span>

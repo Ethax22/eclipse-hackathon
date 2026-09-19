@@ -42,10 +42,10 @@ export default function FAQPage() {
   }
 
   return (
-    <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
+    <div className="pt-28 pb-16 md:pt-32 md:pb-24 bg-bg-primary min-h-screen">
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <span className="text-label text-orange-DEFAULT uppercase tracking-widest block mb-2 font-mono">
             FREQUENTLY ASKED QUESTIONS
           </span>

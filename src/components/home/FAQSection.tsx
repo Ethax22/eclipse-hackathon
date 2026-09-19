@@ -43,13 +43,13 @@ export function FAQSection() {
   }
 
   return (
-    <section id="faq" className="py-24 bg-[#0B0D1B] relative overflow-hidden text-white border-b border-white/10">
+    <section id="faq" className="py-16 md:py-24 bg-[#0B0D1B] relative overflow-hidden text-white border-b border-white/10">
       {/* Background ambient glow behind center */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-[#F89B88]/10 rounded-full blur-[150px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         {/* Centered Section Header */}
-        <div className="max-w-3xl mx-auto text-center mb-16">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-16">
           <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F89B88] font-body block mb-3">
             FREQUENTLY ASKED QUESTIONS
           </span>
@@ -80,14 +80,14 @@ export function FAQSection() {
               >
                 <button
                   onClick={() => toggle(idx)}
-                  className="w-full p-6 text-left flex justify-between items-center gap-4 focus:outline-none cursor-pointer"
+                  className="w-full p-4 sm:p-6 text-left flex justify-between items-center gap-3 sm:gap-4 focus:outline-none cursor-pointer"
                 >
                   <span
                     className={`font-display font-bold text-base md:text-lg flex items-center gap-3 transition-colors duration-200 ${
                       isOpen ? 'text-[#F89B88]' : 'text-white hover:text-[#F89B88]'
                     }`}
                   >
-                    <HelpCircle size={20} className={isOpen ? 'text-[#F89B88]' : 'text-slate-400'} />
+                    <HelpCircle size={20} className={`shrink-0 ${isOpen ? 'text-[#F89B88]' : 'text-slate-400'}`} />
                     {faq.q}
                   </span>
                   <ChevronDown
@@ -99,7 +99,7 @@ export function FAQSection() {
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-2 text-slate-300 text-sm leading-relaxed border-t border-white/10 bg-white/5">
+                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pt-3 sm:pt-2 text-slate-300 text-sm leading-relaxed border-t border-white/10 bg-white/5">
                     {faq.a}
                   </div>
                 )}

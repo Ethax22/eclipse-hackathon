@@ -41,13 +41,13 @@ const roundsTimeline = [
 
 export function LinearTimelineSection() {
   return (
-    <section id="timeline" className="py-24 bg-[#0B0D1B] relative overflow-hidden border-b border-white/10 text-white">
+    <section id="timeline" className="py-16 md:py-24 bg-[#0B0D1B] relative overflow-hidden border-b border-white/10 text-white">
       {/* Background ambient glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#F89B88]/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-10 md:mb-16">
           <span className="text-xs font-bold tracking-[0.25em] uppercase text-[#F89B88] font-body block mb-3">
             EVENT TIMELINE
           </span>
@@ -76,7 +76,7 @@ export function LinearTimelineSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: idx * 0.08 }}
-                  className={`rounded-2xl p-6 flex flex-col justify-start backdrop-blur-md border transition-all duration-300 group hover:-translate-y-1.5 min-h-[290px] ${
+                  className={`rounded-2xl p-6 flex flex-col justify-start backdrop-blur-md border transition-all duration-300 group hover:-translate-y-1.5 md:min-h-[290px] ${
                     isActive
                       ? 'bg-[#161936]/90 border-[#F89B88]/60 shadow-[0_0_30px_rgba(248,155,136,0.2)]'
                       : 'bg-[#161936]/50 border-white/10 hover:border-white/20'
@@ -107,12 +107,12 @@ export function LinearTimelineSection() {
                   </div>
 
                   {/* Title Row */}
-                  <h3 className="font-display font-bold text-base md:text-lg text-white mb-2 min-h-[2.75rem] flex items-center group-hover:text-[#F89B88] transition-colors">
+                  <h3 className="font-display font-bold text-base md:text-lg text-white mb-2 md:min-h-[2.75rem] flex items-center group-hover:text-[#F89B88] transition-colors">
                     {item.title}
                   </h3>
 
                   {/* Description Row */}
-                  <p className="text-xs text-slate-300 leading-relaxed">
+                  <p className="text-sm md:text-xs text-slate-300 leading-relaxed">
                     {item.desc}
                   </p>
                 </motion.div>

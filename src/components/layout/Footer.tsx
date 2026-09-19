@@ -44,10 +44,10 @@ export function Footer() {
   const year = process.env.NEXT_PUBLIC_EVENT_YEAR ?? new Date().getFullYear()
 
   return (
-    <footer className="bg-[#0B0D1B] border-t border-white/10 text-white pt-16 pb-8 relative z-10">
+    <footer className="bg-[#0B0D1B] border-t border-white/10 text-white pt-12 md:pt-16 pb-8 relative z-10">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         {/* Top grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_auto] gap-12 pb-12 border-b border-white/10 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1.2fr_auto] gap-10 md:gap-12 pb-10 md:pb-12 border-b border-white/10 mb-8">
           {/* Brand */}
           <div className="max-w-sm">
             <div className="mb-4">
@@ -67,7 +67,7 @@ export function Footer() {
             {eventConfig.contact.email && (
               <a
                 href={`mailto:${eventConfig.contact.email}`}
-                className="inline-flex items-center gap-2 text-[12px] text-slate-300 hover:text-[#F89B88] transition-colors duration-150 bg-white/5 border border-white/10 px-3 py-1.5 rounded-lg"
+                className="inline-flex items-center gap-2 text-[12px] text-slate-300 hover:text-[#F89B88] transition-colors duration-150 bg-white/5 border border-white/10 px-3 py-2.5 sm:py-1.5 rounded-lg break-all sm:break-normal"
               >
                 <span className="text-[#F89B88]">Email:</span> {eventConfig.contact.email}
               </a>
@@ -75,13 +75,13 @@ export function Footer() {
           </div>
 
           {/* Links & Coordinators */}
-          <div className="flex flex-wrap gap-10 md:gap-14">
+          <div className="grid grid-cols-2 sm:flex sm:flex-wrap gap-x-6 gap-y-8 sm:gap-10 md:gap-14">
             {Object.entries(footerNav).map(([group, links]) => (
               <div key={group}>
                 <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#F89B88] font-body mb-4">
                   {group}
                 </h3>
-                <ul className="flex flex-col gap-3 list-none">
+                <ul className="flex flex-col gap-0 sm:gap-3 list-none">
                   {links.map((link) => (
                     <li key={link.label}>
                       {'external' in link && link.external ? (
@@ -89,7 +89,7 @@ export function Footer() {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-[13px] text-slate-300 hover:text-white transition-colors duration-150"
+                          className="flex items-center gap-1.5 py-2.5 sm:py-0 text-[13px] text-slate-300 hover:text-white transition-colors duration-150"
                         >
                           {link.label}
                           <ExternalLink size={11} className="opacity-60" />
@@ -97,7 +97,7 @@ export function Footer() {
                       ) : (
                         <Link
                           href={link.href}
-                          className="text-[13px] text-slate-300 hover:text-white transition-colors duration-150"
+                          className="block py-2.5 sm:py-0 text-[13px] text-slate-300 hover:text-white transition-colors duration-150"
                         >
                           {link.label}
                         </Link>
@@ -113,13 +113,13 @@ export function Footer() {
               <h3 className="text-[10px] font-bold tracking-[0.2em] uppercase text-[#F89B88] font-body mb-4">
                 Coordinators
               </h3>
-              <ul className="flex flex-col gap-2.5 list-none">
+              <ul className="flex flex-col gap-3 list-none">
                 {eventConfig.contact.coordinators.map((c) => (
                   <li key={c.name} className="text-[13px]">
                     <span className="text-slate-400 block text-[11px] font-mono">{c.name}</span>
                     <a
                       href={`tel:${c.rawPhone}`}
-                      className="text-slate-200 hover:text-[#F89B88] font-mono font-medium transition-colors duration-150 flex items-center gap-1"
+                      className="text-slate-200 hover:text-[#F89B88] font-mono font-medium transition-colors duration-150 flex items-center gap-1 py-2.5 -my-1 sm:py-0 sm:my-0"
                     >
                       <Phone size={10} className="text-[#F89B88] shrink-0" />
                       {c.phone}
@@ -150,7 +150,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
-              className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#F89B88] hover:border-[#F89B88]/60 hover:bg-[#F89B88]/10 hover:shadow-[0_0_15px_rgba(248,155,136,0.3)] transition-all duration-300"
+              className="w-11 h-11 sm:w-9 sm:h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#F89B88] hover:border-[#F89B88]/60 hover:bg-[#F89B88]/10 hover:shadow-[0_0_15px_rgba(248,155,136,0.3)] transition-all duration-300"
             >
               <InstagramIcon size={17} />
             </a>
@@ -160,7 +160,7 @@ export function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              className="w-9 h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#F89B88] hover:border-[#F89B88]/60 hover:bg-[#F89B88]/10 hover:shadow-[0_0_15px_rgba(248,155,136,0.3)] transition-all duration-300"
+              className="w-11 h-11 sm:w-9 sm:h-9 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-[#F89B88] hover:border-[#F89B88]/60 hover:bg-[#F89B88]/10 hover:shadow-[0_0_15px_rgba(248,155,136,0.3)] transition-all duration-300"
             >
               <LinkedinIcon size={17} />
             </a>

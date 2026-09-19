@@ -17,6 +17,8 @@ interface PillButtonProps {
   href?: string
   children: React.ReactNode
   className?: string
+  /** Stretch to the full width of the container below the sm breakpoint */
+  fullWidthMobile?: boolean
   onClick?: (e: React.MouseEvent<HTMLElement>) => void
 }
 
@@ -26,6 +28,7 @@ export function PillButton({
   href,
   children,
   className,
+  fullWidthMobile,
   onClick,
 }: PillButtonProps) {
   const [ripples, setRipples] = useState<RippleEffect[]>([])
@@ -64,6 +67,7 @@ export function PillButton({
     baseStyles,
     variantStyles[variant],
     sizeStyles[size],
+    fullWidthMobile && 'w-full sm:w-auto',
     className
   )
 
@@ -101,7 +105,7 @@ export function PillButton({
         whileHover={{ scale: 1.04 }}
         whileTap={{ scale: 0.93, y: 1 }}
         transition={{ type: 'spring', stiffness: 500, damping: 17 }}
-        className="inline-block"
+        className={clsx('inline-block', fullWidthMobile && 'w-full sm:w-auto')}
       >
         <Link href={href} className={combinedClasses} onClick={handlePointerDown}>
           {content}

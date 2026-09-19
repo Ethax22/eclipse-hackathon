@@ -5,7 +5,7 @@ import { demoTrace } from '@/lib/data/judging'
 
 export function SubmissionStatement() {
   return (
-    <section className="py-24 bg-bg-secondary border-b border-white/10 relative overflow-hidden">
+    <section className="py-16 md:py-24 bg-bg-secondary border-b border-white/10 relative overflow-hidden">
       {/* Ambient background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#F89B88]/5 blur-[140px] rounded-full pointer-events-none" />
 

@@ -12,10 +12,10 @@ const checklistItems = [
 
 export default function SubmissionPage() {
   return (
-    <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
+    <div className="pt-28 pb-16 md:pt-32 md:pb-24 bg-bg-primary min-h-screen">
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="max-w-3xl mb-10 md:mb-16">
           <span className="text-label text-orange-DEFAULT uppercase tracking-widest block mb-2 font-mono">
             SUBMISSION REQUIREMENTS
           </span>
@@ -28,7 +28,7 @@ export default function SubmissionPage() {
         </div>
 
         {/* Submission Checklist Grid */}
-        <div className="notch-md bg-bg-secondary border border-white/10 p-8 md:p-12 mb-16">
+        <div className="notch-md bg-bg-secondary border border-white/10 p-5 sm:p-8 md:p-12 mb-10 md:mb-16">
           <h2 className="text-h3 font-display text-text-primary mb-8 flex items-center gap-3">
             <CheckSquare className="text-orange-DEFAULT" size={24} />
             Mandatory Submission Checklist
@@ -46,7 +46,7 @@ export default function SubmissionPage() {
                     <h3 className="font-display font-bold text-base text-text-primary mb-2">
                       {item.title}
                     </h3>
-                    <p className="text-xs text-text-secondary leading-relaxed">
+                    <p className="text-sm md:text-xs text-text-secondary leading-relaxed">
                       {item.desc}
                     </p>
                   </div>
@@ -57,7 +57,7 @@ export default function SubmissionPage() {
         </div>
 
         {/* Official Timeline Section */}
-        <div className="notch-md bg-bg-card border border-white/10 p-8 md:p-12">
+        <div className="notch-md bg-bg-card border border-white/10 p-5 sm:p-8 md:p-12">
           <h2 className="text-h3 font-display text-text-primary mb-8 flex items-center gap-3">
             <Calendar className="text-orange-DEFAULT" size={24} />
             Official Event Timeline
@@ -81,7 +81,7 @@ export default function SubmissionPage() {
                     <h3 className="font-display font-bold text-base text-text-primary mb-1">
                       {item.phase}
                     </h3>
-                    <p className="text-xs text-text-secondary">
+                    <p className="text-sm md:text-xs text-text-secondary">
                       {item.description}
                     </p>
                   </div>

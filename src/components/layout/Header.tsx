@@ -89,7 +89,7 @@ export function Header() {
 
         {/* Mobile hamburger */}
         <button
-          className="lg:hidden text-white p-2 -mr-2"
+          className="lg:hidden text-white p-2.5 -mr-2.5"
           onClick={() => setDrawerOpen(true)}
           aria-label="Open menu"
           aria-expanded={drawerOpen}
@@ -111,8 +111,8 @@ export function Header() {
       {/* Mobile drawer */}
       <div
         className={cn(
-          'fixed top-0 right-0 z-[70] h-full w-[min(320px,90vw)] bg-bg-secondary border-l border-white/10',
-          'flex flex-col p-8 gap-6 transition-transform duration-300',
+          'fixed top-0 right-0 z-[70] h-[100dvh] w-[min(320px,90vw)] bg-bg-secondary border-l border-white/10 overflow-y-auto',
+          'flex flex-col p-6 sm:p-8 gap-6 transition-transform duration-300',
           drawerOpen ? 'translate-x-0' : 'translate-x-full'
         )}
         aria-label="Mobile navigation"
@@ -120,7 +120,7 @@ export function Header() {
         aria-modal="true"
       >
         <button
-          className="self-end text-text-secondary hover:text-text-primary p-1"
+          className="self-end text-text-secondary hover:text-text-primary p-2.5 -m-2.5"
           onClick={() => setDrawerOpen(false)}
           aria-label="Close menu"
         >
@@ -139,13 +139,13 @@ export function Header() {
         <hr className="border-white/10" />
 
         <nav>
-          <ul className="flex flex-col gap-5 list-none">
+          <ul className="flex flex-col gap-1 list-none">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <Link
                   href={link.href}
                   className={cn(
-                    'font-display text-[22px] font-bold transition-colors duration-150',
+                    'block py-3 font-display text-[22px] font-bold transition-colors duration-150',
                     pathname === link.href
                       ? 'text-text-primary'
                       : 'text-text-secondary hover:text-text-primary'

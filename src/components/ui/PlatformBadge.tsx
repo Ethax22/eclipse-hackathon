@@ -12,16 +12,16 @@ export function PlatformBadges() {
   ]
 
   return (
-    <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs text-slate-300 font-medium">
+    <div className="flex flex-wrap items-center gap-2 sm:gap-4 lg:gap-6 text-xs text-slate-300 font-medium">
       {badges.map((b) => {
         const Icon = b.icon
         return (
           <div
             key={b.label}
-            className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-[#F89B88]/40 transition-all duration-200"
+            className="flex items-center gap-1.5 sm:gap-2 px-2.5 sm:px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:border-[#F89B88]/40 transition-all duration-200"
           >
             <Icon size={13} className="text-[#F89B88]" />
-            <span className="tracking-wider text-[11px] font-semibold">{b.label}</span>
+            <span className="tracking-wide sm:tracking-wider text-[11px] font-semibold">{b.label}</span>
           </div>
         )
       })}

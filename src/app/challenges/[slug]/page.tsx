@@ -15,19 +15,19 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
   }
 
   return (
-    <div className="pt-32 pb-24 bg-bg-primary min-h-screen">
+    <div className="pt-28 pb-16 md:pt-32 md:pb-24 bg-bg-primary min-h-screen">
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16">
         {/* Back Link */}
         <Link
           href="/challenges"
-          className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-text-muted hover:text-orange-DEFAULT transition-colors mb-8"
+          className="inline-flex items-center gap-2 py-3 -my-3 text-xs font-mono uppercase tracking-widest text-text-muted hover:text-orange-DEFAULT transition-colors mb-8"
         >
           <ArrowLeft size={14} />
           <span>BACK TO ALL CHALLENGES</span>
         </Link>
 
         {/* Hero Banner */}
-        <div className="notch-md bg-bg-secondary border border-white/10 p-8 md:p-12 mb-12 relative overflow-hidden">
+        <div className="notch-md bg-bg-secondary border border-white/10 p-5 sm:p-8 md:p-12 mb-12 relative overflow-hidden">
           <div className="absolute right-6 top-6 font-display font-extrabold text-7xl md:text-9xl text-white/5 font-mono select-none">
             {challenge.number}
           </div>
@@ -49,7 +49,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
           {/* Main Brief Column */}
           <div className="lg:col-span-8 flex flex-col gap-10">
             {/* Problem Context */}
-            <div className="notch-sm bg-bg-card border border-white/10 p-8">
+            <div className="notch-sm bg-bg-card border border-white/10 p-6 sm:p-8">
               <h2 className="text-h4 font-display text-text-primary mb-4 flex items-center gap-3">
                 <span className="w-2 h-2 bg-orange-DEFAULT" />
                 Problem Context
@@ -60,7 +60,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
             </div>
 
             {/* Core Challenge */}
-            <div className="notch-sm bg-bg-card border border-white/10 p-8">
+            <div className="notch-sm bg-bg-card border border-white/10 p-6 sm:p-8">
               <h2 className="text-h4 font-display text-text-primary mb-4 flex items-center gap-3">
                 <span className="w-2 h-2 bg-orange-DEFAULT" />
                 Challenge Requirement
@@ -71,7 +71,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
             </div>
 
             {/* Mandatory Capabilities */}
-            <div className="notch-sm bg-bg-card border border-white/10 p-8">
+            <div className="notch-sm bg-bg-card border border-white/10 p-6 sm:p-8">
               <h2 className="text-h4 font-display text-text-primary mb-6 flex items-center gap-3">
                 <span className="w-2 h-2 bg-orange-DEFAULT" />
                 Mandatory Capabilities ({challenge.capabilities.length})
@@ -92,7 +92,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
             </div>
 
             {/* Illustrative Scenario */}
-            <div className="notch-sm bg-bg-card border border-white/10 p-8">
+            <div className="notch-sm bg-bg-card border border-white/10 p-6 sm:p-8">
               <h2 className="text-h4 font-display text-text-primary mb-4 flex items-center gap-3">
                 <span className="w-2 h-2 bg-orange-DEFAULT" />
                 Illustrative Scenario
@@ -104,7 +104,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
 
             {/* Safety & Governance (if present) */}
             {challenge.safetyGovernance && (
-              <div className="notch-sm bg-orange-DEFAULT/10 border border-orange-DEFAULT/30 p-8">
+              <div className="notch-sm bg-orange-DEFAULT/10 border border-orange-DEFAULT/30 p-6 sm:p-8">
                 <h2 className="text-h4 font-display text-orange-bright mb-3 flex items-center gap-3">
                   <ShieldAlert size={20} className="text-orange-DEFAULT" />
                   Safety &amp; Governance Rules
@@ -140,7 +140,7 @@ export default function ChallengeDetailPage({ params }: { params: { slug: string
               <h3 className="font-display font-bold text-sm tracking-wider uppercase text-text-primary mb-3">
                 BUILD REQUIREMENT
               </h3>
-              <p className="text-xs text-text-secondary leading-relaxed mb-4">
+              <p className="text-sm md:text-xs text-text-secondary leading-relaxed mb-4">
                 {challenge.whatToDemo}
               </p>
               <div className="flex items-center gap-2 text-xs font-mono text-orange-bright">

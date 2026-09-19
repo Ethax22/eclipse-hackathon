@@ -15,13 +15,13 @@ const philosophySteps = [
 
 export function PhilosophySection() {
   return (
-    <section className="py-24 bg-bg-primary relative overflow-hidden border-b border-white/10">
+    <section className="py-16 md:py-24 bg-bg-primary relative overflow-hidden border-b border-white/10">
       {/* Background ambient lighting */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#F89B88]/5 blur-[120px] rounded-full pointer-events-none" />
 
       <div className="max-w-[1440px] mx-auto px-5 md:px-10 lg:px-16 relative z-10">
         {/* Header */}
-        <div className="max-w-2xl mb-16">
+        <div className="max-w-2xl mb-10 md:mb-16">
           <span className="text-label text-[#F89B88] uppercase tracking-widest block mb-2 font-mono">
             CORE AGENT PHILOSOPHY
           </span>
@@ -62,7 +62,7 @@ export function PhilosophySection() {
                   <h3 className="font-display font-bold text-sm tracking-wider text-text-primary mb-2 group-hover:text-[#F89B88] transition-colors">
                     {step.title}
                   </h3>
-                  <p className="text-xs text-text-secondary leading-snug">
+                  <p className="text-sm md:text-sm md:text-xs text-text-secondary leading-snug">
                     {step.desc}
                   </p>
                 </div>
