@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ---- Design Tokens ---- */
+:root {
+  --bg-primary: #0B0D1B;
+  --bg-secondary: #121529;
+  --orange: #F89B88;
+  --orange-bright: #F37970;
+  --orange-dim: rgba(248,155,136,0.15);
+  --orange-glow: rgba(248,155,136,0.35);
+  --text-primary: #FFFFFF;
+  --text-secondary: #B3B9C9;
+  --text-muted: #717A94;
+  --line: rgba(255,255,255,0.08);
+  --line-orange: rgba(248,155,136,0.30);
+}
+
+/* ---- Base ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* ---- Clip-path notch utility ---- */
+.notch-sm  { clip-path: polygon(0 0, calc(100% - 8px) 0,  100% 8px,  100% 100%, 0 100%); }
+.notch-md  { clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); }
+.notch-lg  { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%); }
+
+/* ---- Orange glow ---- */
+.glow-orange { box-shadow: 0 0 24px var(--orange-glow); }
+.text-glow-orange { text-shadow: 0 0 32px rgba(255,106,0,0.6); }
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: rgba(255,106,0,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--orange); }
+
+/* ---- Focus ---- */
+:focus-visible { outline: 2px solid var(--orange); outline-offset: 3px; }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---- Particle canvas ---- */
+.particle-canvas {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ---- Hero gradient overlay ---- */
+.hero-fade-left {
+  background: linear-gradient(90deg, var(--bg-primary) 30%, transparent 70%);
+}
+.hero-fade-bottom {
+  background: linear-gradient(0deg, var(--bg-primary) 0%, transparent 40%);
+}
+
+/* ---- Section divider ---- */
+.section-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--line-orange), transparent);
+}
+
+/* ---- Writing mode for side labels ---- */
+.writing-vertical {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
