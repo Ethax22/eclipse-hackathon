@@ -11,7 +11,7 @@ const roundsTimeline = [
     status: 'ACTIVE',
     icon: Rocket,
     title: 'Registration & Idea Submission',
-    desc: 'Register your team (1-4 members) on Unstop or HACK2SKILL. Choose your challenge track or OPEN-X.',
+    desc: 'Register your team (1-5 members) on Unstop or HACK2SKILL. Choose your challenge track or OPEN-X.',
   },
   {
     phase: 'ROUND 1',

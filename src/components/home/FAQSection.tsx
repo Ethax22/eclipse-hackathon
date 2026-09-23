@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: 'Who is eligible to participate?',
-    a: 'The hackathon is open to students, developers, researchers, and AI enthusiasts. Teams can consist of 1 to 4 members.',
+    a: 'The hackathon is open to students, developers, researchers, and AI enthusiasts. Teams can consist of 1 to 5 members.',
   },
   {
     q: 'Where do I register?',
