@@ -1,6 +1,7 @@
 import { Hero } from '@/components/home/Hero'
 import { DecorativeGrid } from '@/components/home/DecorativeGrid'
 import { HeroStrip } from '@/components/home/HeroStrip'
+import { MediaPartnerSection } from '@/components/home/MediaPartnerSection'
 import { PhilosophySection } from '@/components/home/PhilosophySection'
 import { ChallengePreview } from '@/components/home/ChallengePreview'
 import { LinearTimelineSection } from '@/components/home/LinearTimelineSection'
@@ -17,6 +18,7 @@ export default function HomePage() {
       <DecorativeGrid />
       <Hero />
       <HeroStrip />
+      <MediaPartnerSection />
       <PhilosophySection />
       <ChallengePreview />
       <LinearTimelineSection />

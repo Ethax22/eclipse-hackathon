@@ -38,6 +38,9 @@ const footerNav = {
     { label: 'Unstop', href: eventConfig.registration.unstopUrl, external: true },
     { label: 'HACK2SKILL', href: eventConfig.registration.hack2skillUrl, external: true },
   ],
+  'Media Partner': [
+    { label: 'Eventopia', href: 'https://eventopia.in', external: true },
+  ],
 }
 
 export function Footer() {
