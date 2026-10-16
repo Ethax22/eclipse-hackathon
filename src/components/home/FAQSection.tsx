@@ -31,7 +31,7 @@ const faqs = [
   },
   {
     q: 'What are the key dates?',
-    a: 'Registration opens September 20, 2026 and closes September 30, 2026. Round 1 runs Oct 1 - Oct 6, Round 2 runs Oct 11 - Oct 23, and Finals take place on October 27, 2026.',
+    a: 'Registration opens September 20, 2026 and closes October 16, 2026. Round 1 runs Oct 1 - Oct 16, Round 2 runs Oct 19 - Oct 27, and Finals take place on October 31, 2026.',
   },
 ]
 

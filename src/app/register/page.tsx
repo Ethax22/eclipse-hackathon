@@ -111,7 +111,7 @@ export default function RegisterPage() {
             </li>
             <li className="flex items-start gap-2">
               <CheckCircle2 size={14} className="text-orange-DEFAULT shrink-0 mt-0.5" />
-              <span>Registration deadline is September 30, 2026. Submissions open on October 1, 2026.</span>
+              <span>Registration deadline is October 16, 2026. Submissions open on October 1, 2026.</span>
             </li>
           </ul>
         </div>

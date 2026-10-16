@@ -7,7 +7,7 @@ import { Calendar, Flag, Zap, Trophy, Rocket } from 'lucide-react'
 const roundsTimeline = [
   {
     phase: 'REGISTRATION OPEN',
-    dates: 'Sep 20 – Sep 30, 2026',
+    dates: 'Sep 20 – Oct 16, 2026',
     status: 'ACTIVE',
     icon: Rocket,
     title: 'Registration & Idea Submission',
@@ -15,7 +15,7 @@ const roundsTimeline = [
   },
   {
     phase: 'ROUND 1',
-    dates: 'Oct 01 – Oct 06, 2026',
+    dates: 'Oct 01 – Oct 16, 2026',
     status: 'UPCOMING',
     icon: Zap,
     title: 'Agentic Core Build',
@@ -23,7 +23,7 @@ const roundsTimeline = [
   },
   {
     phase: 'ROUND 2',
-    dates: 'Oct 11 – Oct 23, 2026',
+    dates: 'Oct 19 – Oct 27, 2026',
     status: 'UPCOMING',
     icon: Flag,
     title: 'Scaling & Edge-Case Handling',
@@ -31,7 +31,7 @@ const roundsTimeline = [
   },
   {
     phase: 'FINALS',
-    dates: 'Oct 27, 2026',
+    dates: 'Oct 31, 2026',
     status: 'UPCOMING',
     icon: Trophy,
     title: 'Live Demos & Award Ceremony',
